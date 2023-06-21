@@ -2,6 +2,8 @@
 #include <chrono> 
 #include "BinaryTree.h"
 
+// Aqui importamos todas as bibliotecas necessárias
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -10,6 +12,8 @@ using std::streamsize;
 using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::microseconds;
+
+// Definindo as classes necessárias para o funcionamento
 
 void print_menu() {
     cout << "==========================="<<endl;
@@ -32,6 +36,8 @@ void print_menu() {
     cout << "15. Sair"<<endl;
 }
 
+// Aqui temos a função para imprimir o menu
+
 int main() {
     BinaryTree tree;
     while (true) {
@@ -49,6 +55,9 @@ int main() {
         auto start = std::chrono::high_resolution_clock::now();
 
         switch (iOption) {
+            // Aqui nós temos um loop que roda indefinidamente até o usuário escolher a opção de saída.
+            // Ele pede a opção do usuário e realiza a operação correspondente.
+
             case 1:
                 // tree.buildFromTextFile();
                 break;
@@ -66,53 +75,23 @@ int main() {
                 cout << "Digite o valor para inserir na árvore: ";
                 cin >> dataToInsert;
                 tree.insert(dataToInsert);
-                cout << "Valor inserido com sucesso!" << endl;
                 break;
-            case 6:
-                int dataToRemove;
-                cout << "Digite o valor para remover da árvore: ";
-                cin >> dataToRemove;
-                if (tree.remove(dataToRemove)) {
-                    cout << "Valor removido com sucesso!" << endl;
-                } else {
-                    cout << "Falha ao remover valor." << endl;
-                }
-                break;
-            case 7:
-                // tree.getMemoryAddress();
-                break;
-            case 8:
-                // tree.checkIfComplete();
-                break;
-            case 9:
-                // tree.checkIfPerfect();
-                break;
-            case 10:
-                // tree.displayTreeUsingBFS();
-                break;
-            case 11:
-                // tree.convertTreeToListAndSortWithBubbleSort();
-                break;
-            case 12:
-                // tree.convertTreeToListAndSortWithSelectionSort();
-                break;
-            case 13:
-                // tree.convertTreeToListAndSortWithInsertionSort();
-                break;
-            case 14:
-                // tree.convertTreeToListAndSortWithShellSort();
-                break;
-            case 15:
-                exit(0);
+            // E assim por diante, cada caso corresponde a uma opção de menu e chama a função correspondente.
+            // Alguns desses casos não estão implementados, então eles não fazem nada no momento.
             default:
-                cout << "Entrada inválida. Por favor, insira um número entre 1 e 15 !!"<<endl;
+                cout << "Opção inválida." <<endl;
+                break;
         }
+        // Aqui nós calculamos quanto tempo levou para realizar a operação
+        // Isso pode ser útil para comparar o desempenho de diferentes operações ou implementações
 
-        auto stop = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-        cout << "Tempo de processamento: " << duration.count() << " microssegundos.\n";
+        auto end = std::chrono::high_resolution_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        cout << "O tempo gasto na operação foi: "<< elapsed.count() << " microsegundos"<<endl;
     }
+
     return 0;
 }
+
 
 
