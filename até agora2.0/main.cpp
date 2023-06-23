@@ -1,5 +1,6 @@
 #include <iostream>
 #include <chrono> 
+#include<algorithm>
 #include "BinaryTree.h"
 
 // Aqui importamos todas as bibliótecas necessárias
@@ -52,10 +53,10 @@ int main() {
             continue;
         }
 
-        auto start = std::chrono::high_resolution_clock::now();
-
+        auto start = std::chrono::high_resolution_clock::now();//insere a contagem
+    
         switch (iOption) {
-            // Aqui nós temos um loop que roda indefinidamente até o usuário escolher a opção de saída.
+            // Aqui nós temos um loop que roda indefinidamente até o usuário escolher a opção de saída 15.
             // Ele pede a opção do usuário e realiza a operação correspondente.
 
             case 1:
@@ -71,10 +72,10 @@ int main() {
                 // tree.getSize();
                 break;
             case 5:    
-                int dataToInsert;
+                int iDataToInsert;
                 cout << "Digite o valor para inserir na árvore: ";
-                cin >> dataToInsert;
-                tree.insert(dataToInsert);
+                cin >> iDataToInsert;
+                tree.insert(iDataToInsert);//aqui estamos usando método
                 break;
             // E assim por diante, cada caso corresponde a uma opção de menu e chama a função correspondente.
             // Alguns desses casos não estão implementados, então eles não fazem nada no momento.
@@ -84,9 +85,9 @@ int main() {
                 cout << "Opção inválida." <<endl;
                 break;
         }
-        // Aqui nós calculamos quanto tempo levou para realizar a operação
-        // Isso pode ser útil para comparar o desempenho de diferentes operações ou implementações
-
+       
+        // Depois de executar a operação, nós cronometramos o tempo novamente
+        // E subtraímos o tempo inicial do tempo final para obter quanto tempo a operação levou
         auto end = std::chrono::high_resolution_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
         cout << "O tempo gasto na operação foi: "<< elapsed.count() << " microsegundos"<<endl;
