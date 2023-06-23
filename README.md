@@ -1,46 +1,51 @@
-# trabalho-ED
-Enunciado:
-Entrega 30/06:
--via repositório  GitHub
--Histórico detalhado
+<h1 align = "center"> Trabalho de Estrutura de Dados - A2 </h1>
+<h2 align = "center"> Explorador de Árvores </h2>
 
-Código Fonte:
-.Identificadores com significados, utilizando a notação Húngara
-.Comentário em funções e drive code
-.Código organizado em módulos(.cpp e .h e .hpp)
+<hr>
 
-Objetivo do trabalho é construir um explorador de árvores:
+<p> Este repositório foi criado com o intuito de armazenar a tarefa da A2 de Estrutura de Dados de 2023.</p>
 
-01.O programa deve oferecer um menu ASCII para o usuário com as opções de uso
+<hr>
 
-02.Todas as operações devem indicar o tempo de processamento utilizado após finalizado
+<h3>Alunos criadores do repositório:</h3>
 
-03.Uma das opções deve ser a construção de uma árvore binária a partir de um arquivo texto
+<ul>
+  <li> <a href = "https://github.com/AriOliv"> Ari Oliveira <a/> </li>
+  <li> <a href = "https://github.com/CarlSouza"> Carlos Souza <a/> </li>
+  <li> <a href = "https://github.com/Rian-Freitas"> Rian Freitas <a/> </li>
+  <li> <a href = "https://github.com/TFrankeM"> Thiago Melchiors <a/> </li>
+</ul>
+  
+<hr>
 
-04.Uma das opções deve ser a construção de uma árvore binária a partir de dados digitados pelo usuário
+<h3 align = "center">Sobre o código</h3>
 
-05.Uma das opções deve informar a altura da árvore
+<h3>Funcionalidades</h3>
+<p>O programa oferece as seguintes possibilidades de análise de árvores binárias:</p>
 
-06.Uma das opções deve informar o tamanho da árvore
+<ol>
+  <li> Menu ASCII para o usuário com as opções de uso; </li>
+  <li> Indicação do tempo de processamento utilizado para cada função; </li>
+  <li> Construção de uma árvore binária a partir de um arquivo texto; </li>
+  <li> Construção de uma árvore binária a partir de dados digitados pelo usuário; </li>
+  <li> Indicação da altura da árvore; </li>
+  <li> Indicação do tamanho da árvore; </li>
+  <li> Inserção de um elemento fornecido pelo usuário; </li>
+  <li> Remoção de um elemento fornecido pelo usuário; </li>
+  <li> Busca do endereço de memória de um elemento fornecido pelo usuário; </li>
+  <li> Informa se a árvore é completa; </li>
+  <li> Informa se a árvore é perfeita; </li>
+  <li> Exibe a árvore utilizando BFS; </li>
+  <li> Converte a árvore em uma lista e ordena com Bubble Sort; </li>
+  <li> Converte a árvore em uma lista e ordena com Selection Sort; </li>
+  <li> Converte a árvore em uma lista e ordena com Insertion Sort; </li>
+  <li> Converte a árvore em uma lista e ordena com Shell Sort. </li>
+  
+</ol>
 
-07.Uma das opções deve ser a inserção de um elemento fornecido pelo usuário 
+<hr>
 
-08.Uma das opções deve ser a remoção de um elemento fornecido pelo usuário 
+<h3>Como usar:</h3>
 
-09.Uma das opções deve ser a busca do endereço de memória de um elemento fornecido pelo usuário
+<p>Faça o download dos arquivos do repositório e utilize um compilador adequado de C++ (há boas opções on-line). Execute o arquivo <i>main.cpp</i>.</p>
 
-10.Uma das opções deve informar se a árvore é completa
-
-11.Uma das opções deve informar se a árvore é perfeita
-
-12.Uma das opções deve exibir a árvore utilizando BFS-elabore uma implementação eficiente
-
-13.Uma das opções deve converter a árvore em uma lista e ordenar com Bubble Sort
-
-14.Uma das opções deve converter a árvore em uma lista e ordenar com Selection Sort
-
-15.Uma das opções deve converter a árvore em uma lista e ordenar com Insertion Sort
-
-16.Uma das opções deve converter a árvore em uma lista e ordenar com Shell Sort
-
-17.EXTRA: Representação gráfica da ordenação
