@@ -1,6 +1,8 @@
 #ifndef __TREE_NODE_H_
 #define __TREE_NODE_H_
 
+using std::cout;
+
 struct TreeNode* newNode(int iData);
 struct TreeNode* insertNode(struct TreeNode* node, int iVal);
 void printTree(struct TreeNode* ptrStartingNode);
