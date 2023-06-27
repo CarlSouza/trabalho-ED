@@ -32,7 +32,7 @@ void print_menu() {
     cout << "12. Converter a árvore em uma lista e ordenar com Selection Sort" <<endl;
     cout << "13. Converter a árvore em uma lista e ordenar com Insertion Sort" <<endl;
     cout << "14. Converter a árvore em uma lista e ordenar com Shell Sort" <<endl;
-    cout << "15. Sair"<<endl;
+    cout << "15. Sair" <<endl;
     
     cout << "\n===========================================================================" <<endl;                
 }
