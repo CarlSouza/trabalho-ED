@@ -1,5 +1,5 @@
-#ifndef BINARYTREE_H
-#define BINARYTREE_H
+#ifndef __BINARYTREE_H_
+#define __BINARYTREE_H_
 
 #include "TreeNode.h"
 #include <vector>
@@ -50,4 +50,4 @@ struct BinaryTree {
 };
 
 
-#endif  // BINARYTREE_H
+#endif  // __BINARYTREE_H_

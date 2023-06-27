@@ -1,5 +1,5 @@
-#ifndef TREE_NODE_H
-#define TREE_NODE_H
+#ifndef __TREE_NODE_H_
+#define __TREE_NODE_H_
 
 // Definindo um nó da árvore
 struct TreeNode {
@@ -12,4 +12,4 @@ struct TreeNode {
     TreeNode() : ptrLeft(nullptr), ptrRight(nullptr), iData(0) {}
 };
 
-#endif // TREE_NODE_H
+#endif // __TREE_NODE_H_
