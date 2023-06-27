@@ -1,7 +1,7 @@
 #ifndef __BINARYTREE_H_
 #define __BINARYTREE_H_
 
-#include "TreeNode.h"
+#include "TreeNode.hpp"
 #include <vector>
 #include <fstream>
 #include <sstream>
