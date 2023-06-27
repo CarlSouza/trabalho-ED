@@ -1,28 +1,8 @@
 #include <iostream>
+#include "../headers/LinkedList.hpp"
 
 using std::cout;
 using std::endl;
-
-// Estrutura de node das listas duplamente encadeadas
-struct ListNode
-{
-    int iData;
-    struct ListNode* ptrNext;
-    struct ListNode* ptrPrev;
-};
-
-
-// Funcao para criar novos nodes
-struct ListNode* createNode(int iVal, struct ListNode* next, struct ListNode* prev)
-{
-    struct ListNode* newNode = new struct ListNode;
-    newNode->iData = iVal;
-    newNode->ptrNext = next;
-    newNode->ptrPrev = prev;
-
-    return newNode;
-}
-
 
 // Funcao para inserir novos nodes a lista duplamente encadeada
 void insertListNode(struct ListNode** head, int iVal)
