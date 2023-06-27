@@ -1,4 +1,4 @@
-#include "BinaryTree.h"
+#include "../headers/BinaryTree.hpp"
 #include <fstream>
 #include <iostream>
 

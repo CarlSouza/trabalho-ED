@@ -1,7 +1,7 @@
 #include <iostream>
 #include <chrono> 
 #include <algorithm>
-#include "./headers/BinaryTree.h""
+#include "../headers/BinaryTree.hpp"
 
 using std::cout;
 using std::cin;
