@@ -1,6 +1,6 @@
 #include <iostream>
 #include <chrono> 
-#include<algorithm>
+#include <algorithm>
 #include "BinaryTree.h"
 
 using std::cout;
