@@ -1,4 +1,4 @@
-#include "../headers/TreeNode.h"
+#include "../headers/TreeNode.hpp"
 
 // Três tipos de sequenciamento de árvores: pré-ordem, pós-ordem, e em ordem
 struct TreeNode* newNode(int iData)
