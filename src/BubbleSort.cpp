@@ -34,7 +34,9 @@ void bubbleSort(struct ListNode** head, bool showSort_)
                     bUnordered = true;                                // trocamos o status de desordenado para verdadeiro
 
                     ptrCurrent = ptrCurrent->ptrNext;                // avancamos o ponteiro atual para o seu "proximo", pois 
+                    
                                                                       // com o swap ele passa a ficar atras de ptrLarger
+                    // Visualizar o ordenamento
                     if(showSort_ == true) {
                         print_bars(*head);
                     }

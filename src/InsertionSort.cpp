@@ -1,9 +1,10 @@
 #include <iostream>
 #include "../headers/LinkedList.hpp"
 // #include "../headers/InsertionSort.hpp"
+#include "../headers/Utils.hpp"
 
 // Funcao de ordenacao em INSERTION SORT
-void insertionSort(struct ListNode** head, bool showSort)
+void insertionSort(struct ListNode** head, bool showSort_)
 {
     // Verificar se a lista esta vazia ou se possui apenas um elemento
     if ((*head) == nullptr || (*head)->ptrNext == nullptr)
@@ -34,6 +35,11 @@ void insertionSort(struct ListNode** head, bool showSort)
             {
                 // Chama a função swapNode para trocar o node ptrUnordered com o node anterior (ptrUnordered->ptrPrev)
                 swapListNodes(head, ptrUnordered->ptrPrev, ptrUnordered);
+
+                // Visualizar o ordenamento
+                if(showSort_ == true) {
+                        print_bars(*head);
+                }
             }
         }
         // Mover para o proximo node na lista nao ordenada
