@@ -2,6 +2,7 @@
 #include <chrono> 
 #include <algorithm>
 #include "../headers/BinaryTree.hpp"
+#include "../headers/Utils.hpp"
 
 using std::cout;
 using std::cin;
@@ -130,15 +131,19 @@ int main() {
                 // tree.displayBFS();
                 break;
             case 11:
+                sort(tree.ptrRoot, iOption);
                 // tree.convertAndSort("Bubble Sort");
                 break;
             case 12:
+                sort(tree.ptrRoot, iOption);
                 // tree.convertAndSort("Selection Sort");
                 break;
             case 13:
+                sort(tree.ptrRoot, iOption);
                 // tree.convertAndSort("Insertion Sort");
                 break;
             case 14:
+                sort(tree.ptrRoot, iOption);
                 // tree.convertAndSort("Shell Sort");
                 break;
             case 15:
