@@ -7,11 +7,11 @@
 void treeToList(struct TreeNode* root, struct ListNode** head);
 void sort(struct TreeNode* root);
 void showSort(struct TreeNode* root);
-int find_max(const std::vector<int>& vec);
+int find_max(struct ListNode* head);
 void print_bars(struct ListNode** head);
 void printSortOptions();
 
-void bubbleSort(struct ListNode** head, bool showSort);
+void bubbleSort(struct ListNode** head, bool showSort_);
 void insertionSort(struct ListNode** head, bool showSort);
 void selectionSort(struct ListNode** head, bool showSort);
 void shellSort(struct ListNode** head, bool showSort);

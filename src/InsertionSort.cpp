@@ -3,7 +3,7 @@
 // #include "../headers/InsertionSort.hpp"
 
 // Funcao de ordenacao em INSERTION SORT
-void insertionSort(struct ListNode** head)
+void insertionSort(struct ListNode** head, bool showSort)
 {
     // Verificar se a lista esta vazia ou se possui apenas um elemento
     if ((*head) == nullptr || (*head)->ptrNext == nullptr)

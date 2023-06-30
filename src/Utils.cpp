@@ -1,4 +1,4 @@
-#include <iostream>
+    #include <iostream>
 #include <vector>
 #include <chrono>
 #include <thread>
@@ -30,40 +30,43 @@ void printSortOptions() {
     cout << "\n===========================================================================" << endl;                
 }
 
-// Função para encontrar o valor máximo no vetor
-int find_max(const std::vector<int>& vec) {
-    int max_value = vec[0];
-    for (int i = 1; i < vec.size(); i++) {
-        if (vec[i] > max_value) {
-            max_value = vec[i];
-        }
-    }
-    return max_value;
-}
-
-// Função para imprimir o vetor como barras de '#'
-void print_bars(const std::vector<int>& vec) {
-    int max_value = find_max(vec);
-    for (int i = max_value; i > 0; i--) {
-        for (int j = 0; j < vec.size(); j++) {
-            if (vec[j] >= i) {
-                std::cout << "# ";
-            } else {
-                std::cout << "  ";
+int find_max(struct ListNode* head) {
+        int max_value = head->iData;
+        struct ListNode* current = head->ptrNext;
+        while (current != nullptr) {
+            if (current->iData > max_value) {
+                max_value = current->iData;
             }
+            current = current->ptrNext;
         }
-        std::cout << "\n";
-    }
+        return max_value;
+    } 
+    
+// Função para imprimir o vetor como barras de '#'
+// void print_bars(const std::vector<int>& vec) {
+//     int max_value = find_max(vec);
+//     for (int i = max_value; i > 0; i--) {
+//         for (int j = 0; j < vec.size(); j++) {
+//             if (vec[j] >= i) {
+//                 std::cout << "# ";
+//             } else {
+//                 std::cout << "  ";
+//             }
+//         }
+//         std::cout << "\n";
+//     }
 
-    for (int j = 0; j < vec.size(); j++) { // imprime os valores numéricos abaixo de cada barra
-        std::cout << vec[j] << " ";
-    }
+//     for (int j = 0; j < vec.size(); j++) { // imprime os valores numéricos abaixo de cada barra
+//         std::cout << vec[j] << " ";
+//     }
 
-    std::cout << "\n------------------\n"; // separador para cada passo da ordenação
+//     std::cout << "\n------------------\n"; // separador para cada passo da ordenação
 
-    std::this_thread::sleep_for(std::chrono::seconds(1)); // pausa a execução por 1 segundos
-    std::system("clear"); // limpa a tela
-}
+//     std::this_thread::sleep_for(std::chrono::seconds(1)); // pausa a execução por 1 segundos
+//     std::system("clear"); // limpa a tela
+// }
+
+
 // Funcao para percorrer a arvore de forma iterativa, adicionando os elementos a uma lista.
 void treeToList(struct TreeNode* root, struct ListNode** head)
 {

@@ -3,7 +3,7 @@
 // #include "../headers/SelectionSort.hpp"
 
 // Funcao de ordenacao em SELECTION SORT
-void selectionSort(struct ListNode** head)
+void selectionSort(struct ListNode** head, bool showSort)
 {
     // Ponteiro para o node externo
     struct ListNode* ptrOuter = (*head);

@@ -132,6 +132,7 @@ int main() {
                 sort(tree.ptrRoot);
                 break;
             case 12:
+                showSort(tree.ptrRoot);
                 break;
             case 13:
                 return 0;
