@@ -62,7 +62,7 @@
   <li> A opção 11 converte a árvore em listas ordenas, ela abre outro menu com as opções Bubble, Selection, Insert e Shell; </li>
   <li> A opção 12 mostra representação gráfica por meio símbolos ASCII. </li>
       <ul>
-        <li> Observação: o tamanho das barras verticais da visualização de ordenação corresponde ao número de cada nó. Para que possa usufruir plenamente desta funcionalidade, recomendamos que não insira números negativos, números com um valor absoluto muito grande ou listas de tamanho excessivo.</li>
+        <li> Observação: o tamanho das barras verticais da visualização de ordenação corresponde ao número de cada nó. Para que possa usufruir plenamente desta funcionalidade, recomendamos usar números inteiros não negativos,  com um valor absoluto  não muito grande ou listas de tamanho excessivo. </li>
       </ul>
 </ol>
 
