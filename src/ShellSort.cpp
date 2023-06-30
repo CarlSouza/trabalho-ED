@@ -1,8 +1,8 @@
 #include <iostream>
-#include "../headers/LinkedList.hpp"
-// #include "../headers/ShellSort.hpp"
 
-using std::cout; //Pois há um cout na linha 27 e 37
+#include "../headers/LinkedList.hpp"
+
+using std::cout;
 using std::endl;
 
 // Funcao de ordenacao em SHELL SORT

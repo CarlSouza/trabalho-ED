@@ -1,6 +1,6 @@
 #include <iostream>
+
 #include "../headers/LinkedList.hpp"
-// #include "../headers/SelectionSort.hpp"
 #include "../headers/Utils.hpp"
 
 // Funcao de ordenacao em SELECTION SORT
@@ -35,7 +35,7 @@ void selectionSort(struct ListNode** head, bool showSort_)
                 
                 // Visualizar o ordenamento
                 if(showSort_ == true) {
-                        print_bars(*head);
+                    print_bars(*head);
                 }
             }
             // Avanca para o proximo node interno
