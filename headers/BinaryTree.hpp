@@ -10,9 +10,10 @@ using std::string;
 
 
 // Estrutura da BinaryTree
-struct BinaryTree {
+class BinaryTree {
+private:
     TreeNode* ptrRoot = nullptr; // Ponteiro para a raiz da árvore
-
+public:
     BinaryTree(); // Construtor da árvore
     ~BinaryTree(); // Destrutor da árvore
 
@@ -52,7 +53,7 @@ struct BinaryTree {
 
     // Funções para impressão da árvore
     void displayBFS(TreeNode* ptrRoot); // Imprime a árvore em largura
+
 };
 
-
-#endif  // __BINARYTREE_H_
+#endif // __BINARYTREE_H_

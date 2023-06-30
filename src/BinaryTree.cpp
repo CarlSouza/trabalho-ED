@@ -61,6 +61,10 @@ void BinaryTree::insert(int iData) {
     }
 }
 
+TreeNode* BinaryTree::getRoot() {
+    return ptrRoot;
+}
+
 //Função para encontrar o nó com o valor mínimo na árvore (ou subárvore) a partir do nó fornecido.
 //Em uma árvore binária de busca, o nó com o valor mínimo sempre está no fim da "esquerda" da árvore.
 TreeNode* BinaryTree::findMin(TreeNode* node) {

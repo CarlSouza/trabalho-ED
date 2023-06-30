@@ -13,6 +13,7 @@ using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::microseconds;
 
+
 void print_menu() {
     cout << "\n===========================================================================" <<endl;
     cout << "|                          Explorador de Árvores                          |" <<endl;
@@ -126,10 +127,10 @@ int main() {
             }
             case 10:
                 cout << "A árvore em largura é: ";
-                tree.displayBFS(tree.ptrRoot);
+                tree.displayBFS(tree.getRoot());
                 break;
             case 11:
-                sort(tree.ptrRoot);
+                sort(tree.getRoot());
                 break;
             case 12:
                 break;
