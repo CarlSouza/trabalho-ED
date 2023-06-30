@@ -11,7 +11,7 @@ using std::string;
 
 // Estrutura da BinaryTree
 struct BinaryTree {
-    TreeNode* ptrRoot; // Ponteiro para a raiz da árvore
+    TreeNode* ptrRoot = nullptr; // Ponteiro para a raiz da árvore
 
     BinaryTree(); // Construtor da árvore
     ~BinaryTree(); // Destrutor da árvore
