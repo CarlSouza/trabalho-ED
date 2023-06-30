@@ -6,13 +6,13 @@ using std::string;
 using std::endl;
 
 // Construtor
-BinaryTree::BinaryTree() : ptrRoot(nullptr) {}
+// BinaryTree::BinaryTree() : ptrRoot(nullptr) {};
 
-// Destrutor
-BinaryTree::~BinaryTree() {
-    // Aqui devemos adicionar a lógica para deletar todos os nós da árvore.
-    // Mas por enquanto, vamos deixar isso em branco
-}
+// // Destrutor
+// BinaryTree::~BinaryTree() {
+//     // Aqui devemos adicionar a lógica para deletar todos os nós da árvore.
+//     // Mas por enquanto, vamos deixar isso em branco
+// };
 
 // Função para inserir um novo nó na árvore binária de busca.
 //A inserção ocorre de tal forma que a propriedade da árvore binária de busca seja mantida,

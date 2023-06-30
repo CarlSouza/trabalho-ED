@@ -1,6 +1,8 @@
 #ifndef __TREE_NODE_H_
 #define __TREE_NODE_H_
 
+#include <iostream>
+
 using std::cout;
 
 struct TreeNode* newNode(int iData);
