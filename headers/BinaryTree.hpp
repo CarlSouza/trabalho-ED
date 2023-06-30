@@ -42,7 +42,7 @@ struct BinaryTree {
 
     // Novos métodos para construção da árvore
     void buildFromTextFile(const string &filename); // Construir uma árvore a partir de um arquivo texto
-    void buildFromUserInput(const std::vector<int> &userInput); // Construir uma árvore a partir de dados digitados pelo usuário
+    void buildFromUserInput(const int viUserInput[]); // Construir uma árvore a partir de dados digitados pelo usuário
 
     // Funções principais
     void insert(int iData); // Insere um elemento na árvore

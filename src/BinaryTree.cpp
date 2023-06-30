@@ -227,10 +227,10 @@ void BinaryTree::buildFromTextFile(const string &filename) {
 }
 
 // Função para construir a árvore a partir de dados digitados pelo usuário.
-void BinaryTree::buildFromUserInput(const std::vector<int> &userInput) {
+void BinaryTree::buildFromUserInput(const int viUserInput[]) {
     // Itera sobre cada valor fornecido pelo usuário e insere na árvore.
-    for (const int &value : userInput) {
-        insert(value);
+    for (int i = 0; i < sizeof(viUserInput)/sizeof(viUserInput[0]); i++) {
+        insert(viUserInput[i]);
     }
 }
 
@@ -285,7 +285,6 @@ void deQueue(struct Queue* queue) {
         queue->ptrFront = queue->ptrFront->ptrNext;
         // para o caso de se remover o último elemento, precisamos modificar o ponto rear antes de apagar
         if (queue->ptrFront == nullptr) queue->ptrRear = nullptr;
-        cout << "deQueue: " << ptrTemp->iData << endl;
         
         free(ptrTemp);
     }
