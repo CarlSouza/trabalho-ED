@@ -11,9 +11,9 @@ void showSort(struct TreeNode* root);
 void print_bars(struct ListNode** head);
 void printSortOptions();
 
-void bubbleSort(struct ListNode** head, bool showSort);
-void insertionSort(struct ListNode** head, bool showSort);
-void selectionSort(struct ListNode** head, bool showSort);
-void shellSort(struct ListNode** head, bool showSort);
+void bubbleSort(struct ListNode** head, bool showSort_);
+void insertionSort(struct ListNode** head, bool showSort_);
+void selectionSort(struct ListNode** head, bool showSort_);
+void shellSort(struct ListNode** head, bool showSort_);
 
 #endif // __SORT_ALGORITHIMS_HPP_

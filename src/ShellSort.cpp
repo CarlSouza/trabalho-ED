@@ -6,7 +6,7 @@ using std::cout; //Pois há um cout na linha 27 e 37
 using std::endl;
 
 // Funcao de ordenacao em SHELL SORT
-void shellSort(struct ListNode** head)
+void shellSort(struct ListNode** head, bool showSort_)
 {
     struct ListNode* ptrCurrent = nullptr;
 

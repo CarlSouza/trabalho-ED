@@ -1,9 +1,10 @@
 #include <iostream>
 #include "../headers/LinkedList.hpp"
 // #include "../headers/SelectionSort.hpp"
+#include "../headers/Utils.hpp"
 
 // Funcao de ordenacao em SELECTION SORT
-void selectionSort(struct ListNode** head)
+void selectionSort(struct ListNode** head, bool showSort_)
 {
     // Ponteiro para o node externo
     struct ListNode* ptrOuter = (*head);
@@ -31,6 +32,11 @@ void selectionSort(struct ListNode** head)
                 ptrOuter = ptrTemp;
                 // Atualiza o ponteiro interno para o proximo node apos o node temporario/externo        
                 ptrInner = ptrTemp->ptrNext;
+                
+                // Visualizar o ordenamento
+                if(showSort_ == true) {
+                        print_bars(*head);
+                }
             }
             // Avanca para o proximo node interno
             ptrInner = ptrInner->ptrNext;

@@ -20,13 +20,8 @@ BinaryTree::~BinaryTree() {
 //ou seja, para qualquer nó, os valores à esquerda são menores e os valores à direita são maiores.
 
 void BinaryTree::insert(int iData) {
-    bool test = ptrRoot == nullptr;
-    bool test2 = true;
-    std::cout << "insert " << ptrRoot << std::endl;
-    std::cout << test << " ~ " << test2 << std::endl;
     // Caso a árvore esteja vazia (ou seja, a raiz é nula), crie um novo nó e torne-o a raiz.
     if (ptrRoot == nullptr) {
-        std::cout << "lelek " << std::endl;
         ptrRoot = new TreeNode;
         ptrRoot->iData = iData;
         ptrRoot->ptrLeft = nullptr;
@@ -40,7 +35,6 @@ void BinaryTree::insert(int iData) {
             // Se o novo valor é menor que o valor do nó atual, movemos para a esquerda
             if (iData < currentNode->iData) {
                 currentNode = currentNode->ptrLeft;
-                std::cout << "lhbe  " << std::endl;
                 // Se alcançarmos um ponto onde um nó não tem filho à esquerda, inserimos o novo nó aqui.
                 if (currentNode == nullptr) {
                     parentNode->ptrLeft = new TreeNode;
@@ -236,7 +230,6 @@ void BinaryTree::buildFromTextFile(const string &filename) {
 void BinaryTree::buildFromUserInput(const std::vector<int> &userInput) {
     // Itera sobre cada valor fornecido pelo usuário e insere na árvore.
     for (const int &value : userInput) {
-        std::cout <<"buildFromUserInput " << value << std::endl;
         insert(value);
     }
 }

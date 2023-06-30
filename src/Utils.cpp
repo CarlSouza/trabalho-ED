@@ -30,40 +30,49 @@ void printSortOptions() {
     cout << "\n===========================================================================" << endl;                
 }
 
-// Função para encontrar o valor máximo no vetor
-int find_max(const std::vector<int>& vec) {
-    int max_value = vec[0];
-    for (int i = 1; i < vec.size(); i++) {
-        if (vec[i] > max_value) {
-            max_value = vec[i];
+int find_max(struct ListNode* head) {
+    int max_value = head->iData;
+    struct ListNode* current = head->ptrNext;
+    while (current != nullptr) {
+        if (current->iData > max_value) {
+            max_value = current->iData;
         }
+        current = current->ptrNext;
     }
     return max_value;
-}
+} 
 
-// Função para imprimir o vetor como barras de '#'
-void print_bars(const std::vector<int>& vec) {
-    int max_value = find_max(vec);
-    for (int i = max_value; i > 0; i--) {
-        for (int j = 0; j < vec.size(); j++) {
-            if (vec[j] >= i) {
+void print_bars(struct ListNode* head) {
+    int max_value = find_max(head);
+    struct ListNode* current = head;
+
+    while (max_value > 0) {
+        while (current != nullptr) {
+            if (current->iData >= max_value) {
                 std::cout << "# ";
             } else {
                 std::cout << "  ";
             }
+            current = current->ptrNext;
         }
         std::cout << "\n";
+        current = head;
+        max_value--;
     }
 
-    for (int j = 0; j < vec.size(); j++) { // imprime os valores numéricos abaixo de cada barra
-        std::cout << vec[j] << " ";
+    current = head;
+    while (current != nullptr) {
+        std::cout << current->iData << " ";
+        current = current->ptrNext;
     }
 
     std::cout << "\n------------------\n"; // separador para cada passo da ordenação
 
-    std::this_thread::sleep_for(std::chrono::seconds(1)); // pausa a execução por 1 segundos
+    std::this_thread::sleep_for(std::chrono::seconds(1)); // pausa a execução por 1 segundo
     std::system("clear"); // limpa a tela
-}
+
+} 
+
 // Funcao para percorrer a arvore de forma iterativa, adicionando os elementos a uma lista.
 void treeToList(struct TreeNode* root, struct ListNode** head)
 {
