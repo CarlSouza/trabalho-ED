@@ -69,6 +69,7 @@ void print_bars(struct ListNode* head) {
     std::cout << "\n------------------\n"; // separador para cada passo da ordenação
 
     std::this_thread::sleep_for(std::chrono::seconds(1)); // pausa a execução por 1 segundo
+    
     std::system("clear"); // limpa a tela
 
 } 
