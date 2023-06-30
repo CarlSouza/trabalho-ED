@@ -38,7 +38,7 @@ void print_menu() {
 }
 
 int main() {
-    BinaryTree* tree;
+    BinaryTree tree;
     while (true) {
         print_menu();
         cout << "Selecione uma opcao digitando um numero de 1 a 15:  ";
@@ -59,7 +59,7 @@ int main() {
                 std::string filename;
                 cout << "Digite o nome do arquivo: ";
                 cin >> filename;
-                tree->buildFromTextFile(filename);
+                tree.buildFromTextFile(filename);
                 break;
             }
             case 2:
@@ -70,22 +70,22 @@ int main() {
                 while (cin >> value && value != -1) {
                     userInput.push_back(value);
                 }
-                tree->buildFromUserInput(userInput);
+                tree.buildFromUserInput(userInput);
                 break;
             }
                 break;
             case 3:
-                cout << "A altura da árvore é: " << tree->getHeight() << endl;
+                cout << "A altura da árvore é: " << tree.getHeight() << endl;
                 break;
             case 4:
-                cout << "O tamanho da árvore é: " << tree->getSize() << endl;
+                cout << "O tamanho da árvore é: " << tree.getSize() << endl;
                 break;
             case 5:    
             {
                 int iDataToInsert;
                 cout << "Digite o valor para inserir na árvore: ";
                 cin >> iDataToInsert;
-                tree->insert(iDataToInsert);
+                tree.insert(iDataToInsert);
                 break;
             }
             case 6:
@@ -93,7 +93,7 @@ int main() {
                 int iDataToRemove;
                 cout << "Digite o valor para remover da árvore: ";
                 cin >> iDataToRemove;
-                tree->remove(iDataToRemove);
+                tree.remove(iDataToRemove);
                 break;
             }
             case 7:
@@ -101,7 +101,7 @@ int main() {
                 int iDataToSearch;
                 cout << "Digite o valor para buscar na árvore: ";
                 cin >> iDataToSearch;
-                bool bIsFound = tree->search(iDataToSearch);
+                bool bIsFound = tree.search(iDataToSearch);
                 if(bIsFound)
                     cout << "Elemento encontrado na árvore.";
                 else
@@ -110,7 +110,7 @@ int main() {
             }
             case 8:
             {
-                bool bIsComplete = tree->isComplete();
+                bool bIsComplete = tree.isComplete();
                 if(bIsComplete)
                     cout << "A árvore é completa.";
                 else
@@ -119,7 +119,7 @@ int main() {
             }
             case 9:
             {
-                bool bIsPerfect = tree->isPerfect();
+                bool bIsPerfect = tree.isPerfect();
                 if(bIsPerfect)
                     cout << "A árvore é perfeita.";
                 else

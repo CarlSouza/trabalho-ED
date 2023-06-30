@@ -5,10 +5,10 @@
 using std::string;
 using std::endl;
 
-// Construtor
+// // Construtor
 BinaryTree::BinaryTree() : ptrRoot(nullptr) {};
 
-// Destrutor
+// // Destrutor
 BinaryTree::~BinaryTree() {
     // Aqui devemos adicionar a lógica para deletar todos os nós da árvore.
     // Mas por enquanto, vamos deixar isso em branco
@@ -19,7 +19,10 @@ BinaryTree::~BinaryTree() {
 //ou seja, para qualquer nó, os valores à esquerda são menores e os valores à direita são maiores.
 
 void BinaryTree::insert(int iData) {
-    std::cout << "HEY " << ptrRoot << std::endl;
+    bool test = ptrRoot == nullptr;
+    bool test2 = true;
+    std::cout << "insert " << ptrRoot << std::endl;
+    std::cout << test << " ~ " << test2 << std::endl;
     // Caso a árvore esteja vazia (ou seja, a raiz é nula), crie um novo nó e torne-o a raiz.
     if (ptrRoot == nullptr) {
         std::cout << "lelek " << std::endl;
@@ -31,12 +34,12 @@ void BinaryTree::insert(int iData) {
         // Caso contrário, procuramos o local apropriado para inserir o novo nó.
         TreeNode* currentNode = ptrRoot;
         TreeNode* parentNode;
-        std::cout << "lhbe  " << std::endl;
         while (true) {
             parentNode = currentNode;
             // Se o novo valor é menor que o valor do nó atual, movemos para a esquerda
             if (iData < currentNode->iData) {
                 currentNode = currentNode->ptrLeft;
+                std::cout << "lhbe  " << std::endl;
                 // Se alcançarmos um ponto onde um nó não tem filho à esquerda, inserimos o novo nó aqui.
                 if (currentNode == nullptr) {
                     parentNode->ptrLeft = new TreeNode;
@@ -228,7 +231,7 @@ void BinaryTree::buildFromTextFile(const string &filename) {
 void BinaryTree::buildFromUserInput(const std::vector<int> &userInput) {
     // Itera sobre cada valor fornecido pelo usuário e insere na árvore.
     for (const int &value : userInput) {
-        std::cout <<"opa " << value << std::endl;
+        std::cout <<"buildFromUserInput " << value << std::endl;
         insert(value);
     }
 }
