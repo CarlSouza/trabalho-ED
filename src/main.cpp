@@ -5,8 +5,8 @@
 #include "../headers/Utils.hpp"
 
 // linhas a serem ignoradas no commit
-#include "BinaryTree.cpp"
-#include "Utils.cpp"
+// #include "BinaryTree.cpp"
+// #include "Utils.cpp"
 
 
 
