@@ -1,6 +1,7 @@
 #include "../headers/BinaryTree.hpp"
 #include <fstream>
 #include <iostream>
+#include <queue>
 
 using std::string;
 using std::endl;
@@ -236,3 +237,26 @@ void BinaryTree::buildFromUserInput(const std::vector<int> &userInput) {
     }
 }
 
+void BinaryTree::displayBFS(TreeNode *ptrRoot) {
+
+    std::cout << "BFS: ";
+    if (ptrRoot == nullptr) {
+        std::cout << "Árvore vazia." << std::endl;
+        return;
+    }
+
+    std::queue<TreeNode*> q;
+    q.push(ptrRoot);
+    while (!q.empty()) {
+        TreeNode* current = q.front();
+        q.pop();
+        std::cout << current->iData << " ";
+        if (current->ptrLeft != nullptr) {
+            q.push(current->ptrLeft);
+        }
+        if (current->ptrRight != nullptr) {
+            q.push(current->ptrRight);
+        }
+    }
+    std::cout << std::endl;
+}

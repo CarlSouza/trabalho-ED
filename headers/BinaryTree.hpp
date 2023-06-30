@@ -49,6 +49,9 @@ struct BinaryTree {
     bool remove(int iData); // Remove um elemento da árvore, retorna true se a remoção foi bem-sucedida
     bool search(int iData); // Procura um elemento na árvore, retorna true se o elemento estiver presente
 
+
+    // Funções para impressão da árvore
+    void displayBFS(TreeNode* ptrRoot); // Imprime a árvore em largura
 };
 
 

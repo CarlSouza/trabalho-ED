@@ -125,7 +125,8 @@ int main() {
                 break;
             }
             case 10:
-                // tree.displayBFS();
+                cout << "A árvore em largura é: ";
+                tree.displayBFS(tree.ptrRoot);
                 break;
             case 11:
                 sort(tree.ptrRoot);
