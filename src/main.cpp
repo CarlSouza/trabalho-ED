@@ -4,6 +4,12 @@
 #include "../headers/BinaryTree.hpp"
 #include "../headers/Utils.hpp"
 
+// linhas a serem ignoradas no commit
+#include "BinaryTree.cpp"
+#include "Utils.cpp"
+
+
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -134,7 +140,7 @@ int main() {
                 sort(tree.getRoot());
                 break;
             case 12:
-                showSort(tree.ptrRoot);
+                showSort(tree.getRoot());
                 break;
             case 13:
                 return 0;
