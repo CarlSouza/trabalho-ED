@@ -29,11 +29,8 @@ void print_menu() {
     cout << "8.  Informar se a árvore é completa" <<endl;
     cout << "9.  Informar se a árvore é perfeita" <<endl;
     cout << "10. Exibir a árvore utilizando BFS" <<endl;
-    cout << "11. Converter a árvore em uma lista e ordenar com Bubble Sort" <<endl;
-    cout << "12. Converter a árvore em uma lista e ordenar com Selection Sort" <<endl;
-    cout << "13. Converter a árvore em uma lista e ordenar com Insertion Sort" <<endl;
-    cout << "14. Converter a árvore em uma lista e ordenar com Shell Sort" <<endl;
-    cout << "15. Sair" <<endl;
+    cout << "11. Converter a árvore" <<endl;
+    cout << "13. Sair" <<endl;
     
     cout << "\n===========================================================================" <<endl;                
 }
@@ -42,7 +39,7 @@ int main() {
     BinaryTree tree;
     while (true) {
         print_menu();
-        cout << "Selecione uma opcao digitando um numero de 1 a 15:  ";
+        cout << "Selecione uma opcao digitando um numero de 1 a 13:  ";
         int iOption;
         cin >> iOption;
         if(cin.fail()) {
@@ -131,22 +128,11 @@ int main() {
                 // tree.displayBFS();
                 break;
             case 11:
-                sort(tree.ptrRoot, iOption);
-                // tree.convertAndSort("Bubble Sort");
+                sort(tree.ptrRoot);
                 break;
             case 12:
-                sort(tree.ptrRoot, iOption);
-                // tree.convertAndSort("Selection Sort");
                 break;
             case 13:
-                sort(tree.ptrRoot, iOption);
-                // tree.convertAndSort("Insertion Sort");
-                break;
-            case 14:
-                sort(tree.ptrRoot, iOption);
-                // tree.convertAndSort("Shell Sort");
-                break;
-            case 15:
                 return 0;
             default:
                 cout << "Opção inválida." <<endl;

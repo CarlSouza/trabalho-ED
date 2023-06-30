@@ -2,8 +2,10 @@
 #include "../headers/LinkedList.hpp"
 // #include "../headers/BubbleSort.hpp"
 
+#include "../headers/Utils.hpp"
+
 // Funcao de ordenacao em BUBBLE SORT
-void bubbleSort(struct ListNode** head)
+void bubbleSort(struct ListNode** head, bool showSort)
 {
     // Ponteiro para o maior valor da lista
     struct ListNode* ptrLarger = nullptr;
@@ -31,8 +33,11 @@ void bubbleSort(struct ListNode** head)
                     swapListNodes(head, ptrLarger, ptrCurrent);       // trocamos eles de posicao;
                     bUnordered = true;                                // trocamos o status de desordenado para verdadeiro
 
-                    ptrCurrent = ptrCurrent->ptrNext;                 // avancamos o ponteiro atual para o seu "proximo", pois 
+                    ptrCurrent = ptrCurrent->ptrNext;                // avancamos o ponteiro atual para o seu "proximo", pois 
                                                                       // com o swap ele passa a ficar atras de ptrLarger
+                    // if(showSort) {
+                    //     printOrder();
+                    // }
                 }
             // Caso contrario, o maior valor passa a ser o do ponteiro atual
             else
