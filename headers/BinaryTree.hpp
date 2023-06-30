@@ -9,7 +9,6 @@
 using std::string;
 
 
-
 // Estrutura da BinaryTree
 struct BinaryTree {
     TreeNode* ptrRoot; // Ponteiro para a raiz da árvore

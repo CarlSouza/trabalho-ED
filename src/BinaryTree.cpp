@@ -6,21 +6,23 @@ using std::string;
 using std::endl;
 
 // Construtor
-// BinaryTree::BinaryTree() : ptrRoot(nullptr) {};
+BinaryTree::BinaryTree() : ptrRoot(nullptr) {};
 
-// // Destrutor
-// BinaryTree::~BinaryTree() {
-//     // Aqui devemos adicionar a lógica para deletar todos os nós da árvore.
-//     // Mas por enquanto, vamos deixar isso em branco
-// };
+// Destrutor
+BinaryTree::~BinaryTree() {
+    // Aqui devemos adicionar a lógica para deletar todos os nós da árvore.
+    // Mas por enquanto, vamos deixar isso em branco
+};
 
 // Função para inserir um novo nó na árvore binária de busca.
 //A inserção ocorre de tal forma que a propriedade da árvore binária de busca seja mantida,
 //ou seja, para qualquer nó, os valores à esquerda são menores e os valores à direita são maiores.
 
 void BinaryTree::insert(int iData) {
+    std::cout << "HEY " << ptrRoot << std::endl;
     // Caso a árvore esteja vazia (ou seja, a raiz é nula), crie um novo nó e torne-o a raiz.
     if (ptrRoot == nullptr) {
+        std::cout << "lelek " << std::endl;
         ptrRoot = new TreeNode;
         ptrRoot->iData = iData;
         ptrRoot->ptrLeft = nullptr;
@@ -29,6 +31,7 @@ void BinaryTree::insert(int iData) {
         // Caso contrário, procuramos o local apropriado para inserir o novo nó.
         TreeNode* currentNode = ptrRoot;
         TreeNode* parentNode;
+        std::cout << "lhbe  " << std::endl;
         while (true) {
             parentNode = currentNode;
             // Se o novo valor é menor que o valor do nó atual, movemos para a esquerda
@@ -225,6 +228,7 @@ void BinaryTree::buildFromTextFile(const string &filename) {
 void BinaryTree::buildFromUserInput(const std::vector<int> &userInput) {
     // Itera sobre cada valor fornecido pelo usuário e insere na árvore.
     for (const int &value : userInput) {
+        std::cout <<"opa " << value << std::endl;
         insert(value);
     }
 }
