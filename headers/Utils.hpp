@@ -8,7 +8,7 @@ void treeToList(struct TreeNode* root, struct ListNode** head);
 void sort(struct TreeNode* root);
 void showSort(struct TreeNode* root);
 int find_max(struct ListNode* head);
-void print_bars(struct ListNode** head);
+void print_bars(struct ListNode* head);
 void printSortOptions();
 
 void bubbleSort(struct ListNode** head, bool showSort_);

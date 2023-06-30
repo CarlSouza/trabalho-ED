@@ -36,9 +36,7 @@ void bubbleSort(struct ListNode** head, bool showSort_)
                     ptrCurrent = ptrCurrent->ptrNext;                // avancamos o ponteiro atual para o seu "proximo", pois 
                                                                       // com o swap ele passa a ficar atras de ptrLarger
                     if(showSort_ == true) {
-                        std::cout << "OIIIIII" << std::endl;
-                        int max_test = find_max(*head);
-                        std::cout << "OPAAAA " << max_test << std::endl;
+                        print_bars(*head);
                     }
                 }
             // Caso contrario, o maior valor passa a ser o do ponteiro atual

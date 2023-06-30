@@ -31,40 +31,31 @@ void printSortOptions() {
 }
 
 int find_max(struct ListNode* head) {
-        int max_value = head->iData;
-        struct ListNode* current = head->ptrNext;
-        while (current != nullptr) {
-            if (current->iData > max_value) {
-                max_value = current->iData;
-            }
-            current = current->ptrNext;
+    int max_value = head->iData;
+    struct ListNode* current = head->ptrNext;
+    while (current != nullptr) {
+        if (current->iData > max_value) {
+            max_value = current->iData;
         }
-        return max_value;
-    } 
+        current = current->ptrNext;
+    }
+    return max_value;
+} 
     
 // Função para imprimir o vetor como barras de '#'
-// void print_bars(const std::vector<int>& vec) {
-//     int max_value = find_max(vec);
-//     for (int i = max_value; i > 0; i--) {
-//         for (int j = 0; j < vec.size(); j++) {
-//             if (vec[j] >= i) {
-//                 std::cout << "# ";
-//             } else {
-//                 std::cout << "  ";
-//             }
-//         }
-//         std::cout << "\n";
-//     }
-
-//     for (int j = 0; j < vec.size(); j++) { // imprime os valores numéricos abaixo de cada barra
-//         std::cout << vec[j] << " ";
-//     }
-
-//     std::cout << "\n------------------\n"; // separador para cada passo da ordenação
-
-//     std::this_thread::sleep_for(std::chrono::seconds(1)); // pausa a execução por 1 segundos
-//     std::system("clear"); // limpa a tela
-// }
+void print_bars(struct ListNode* head) {
+    int max_value = find_max(head);
+    struct ListNode* current = head;
+    while (current != nullptr) {
+        int value = current->iData;
+        for (int i = 0; i < value; i++) {
+            std::cout << "# ";
+        }
+        std::cout << "\n";
+        current = current->ptrNext;
+    }
+    std::cout << "------------------\n";
+} 
 
 
 // Funcao para percorrer a arvore de forma iterativa, adicionando os elementos a uma lista.
