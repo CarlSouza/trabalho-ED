@@ -30,6 +30,7 @@ void print_menu() {
     cout << "9.  Informar se a árvore é perfeita" <<endl;
     cout << "10. Exibir a árvore utilizando BFS" <<endl;
     cout << "11. Converter a árvore" <<endl;
+    cout << "12. Mostrar ordenação" <<endl;
     cout << "13. Sair" <<endl;
     
     cout << "\n===========================================================================" <<endl;                
