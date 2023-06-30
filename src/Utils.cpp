@@ -25,7 +25,7 @@ void printSortOptions() {
     
     cout << "\n===========================================================================" << endl;                
 }
-
+//funções para representar a parte gráfica por meio de Símbolos ASCII.
 int find_max(struct ListNode* head) {
     int max_value = head->iData;
     struct ListNode* current = head->ptrNext;
