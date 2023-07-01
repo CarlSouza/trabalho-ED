@@ -140,6 +140,7 @@ int main() {
                 showSort(tree.getRoot());
                 break;
             case 13:
+                cout << "Valeu! :)" << endl;
                 return 0;
             default:
                 cout << "Opção inválida." <<endl;
