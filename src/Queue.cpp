@@ -18,31 +18,48 @@ struct Queue* newQueue() {
 };
 
 // função de insert com um nome diferente :/
-void enQueue(struct Queue* queue, int iValue) {
+void enQueue(struct Queue** queue, int iValue) {
     struct QueueNode* ptrTemp = newQueueNode(iValue);
-    if (queue->ptrRear == nullptr) {
-        queue->ptrFront = ptrTemp;
-        queue->ptrRear = ptrTemp;
-    } else {
-        // lembra que o último da fila tá apontando pra nullptr? nós fazemos o último apontar pra esse novo elemento
-        queue->ptrFront->ptrNext = ptrTemp;
-        // Agora temos que fazer o struct da fila reconhecer esse novo elemento como último
-        queue->ptrRear = ptrTemp;
+
+    if ((*queue)->ptrRear == nullptr) {
+        (*queue)->ptrFront = (*queue)->ptrRear = ptrTemp;
+        return;
     }
+
+    (*queue)->ptrRear->ptrNext = ptrTemp;
+    (*queue)->ptrRear = ptrTemp;
 }
 
-void deQueue(struct Queue* queue) {
-    // tanto faz perguntae se o último ou o primeiro estão vazios
-    if (queue->ptrFront == nullptr) {
-        cout << "Fila vazia." << endl;
-    } else {
-        struct QueueNode* ptrTemp = queue->ptrFront;
-        
-        queue->ptrFront = queue->ptrFront->ptrNext;
-        // para o caso de se remover o último elemento, precisamos modificar o ponto rear antes de apagar
-        if (queue->ptrFront == nullptr) queue->ptrRear = nullptr;
-        cout << "deQueue: " << ptrTemp->iData << endl;
-        
-        free(ptrTemp);
+int deQueue(struct Queue** queue) {
+    if ((*queue)->ptrFront == nullptr) {
+        return -1;
     }
+
+    struct QueueNode* ptrTemp = (*queue)->ptrFront;
+
+    (*queue)->ptrFront = (*queue)->ptrFront->ptrNext;
+
+    if ((*queue)->ptrFront == nullptr) {
+        (*queue)->ptrRear = nullptr;
+    }
+
+    int iData = ptrTemp->iData;
+
+    free(ptrTemp);
+    return iData;
+}
+
+void printQueue(struct Queue* queue) {
+    struct QueueNode* ptrTemp = queue->ptrFront;
+
+    while (ptrTemp != nullptr) {
+        cout << ptrTemp->iData << " ";
+        ptrTemp = ptrTemp->ptrNext;
+    }
+
+    cout << endl;
+}
+
+bool isEmpty(struct Queue* queue) {
+    return queue->ptrFront == nullptr;
 }

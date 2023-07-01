@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <queue>
 
 #include "../headers/BinaryTree.hpp"
 #include "../headers/Queue.hpp"
@@ -236,29 +237,44 @@ void BinaryTree::buildFromUserInput(const int viUserInput[]) {
 }
 
 void BinaryTree::displayBFS(TreeNode *ptrRoot) {
+    // if (ptrRoot == nullptr) {
+    //     return;
+    // }
 
-    std::cout << "BFS: ";
+    // struct Queue* queue = newQueue();
+    // enQueue(&queue, ptrRoot->iData);
+
+    // while (!isEmpty(queue)) {
+    //     int iData = deQueue(&queue);
+    //     std::cout << iData << " ";
+
+    //     if (ptrRoot->ptrLeft != nullptr) {
+    //         enQueue(&queue, ptrRoot->ptrLeft->iData);
+    //         displayBFS(ptrRoot->ptrLeft);
+    //     }
+    //     if (ptrRoot->ptrRight != nullptr) {
+    //         enQueue(&queue, ptrRoot->ptrRight->iData);
+    //         displayBFS(ptrRoot->ptrRight);
+    //     }
+    // }
+
     if (ptrRoot == nullptr) {
-        std::cout << "Árvore vazia." << std::endl;
         return;
     }
 
-    struct Queue* q = newQueue();
-    enQueue(q, ptrRoot->iData);
+    std::queue<TreeNode*> queue;
+    queue.push(ptrRoot);
 
-    while (q->ptrFront != nullptr) {
-        int iValue = q->ptrFront->iData;
-        deQueue(q);
+    while (!queue.empty()) {
+        TreeNode* node = queue.front();
+        std::cout << node->iData << " ";
+        queue.pop();
 
-        std::cout << iValue << " ";
-
-        if (ptrRoot->ptrLeft != nullptr) {
-            enQueue(q, ptrRoot->ptrLeft->iData);
+        if (node->ptrLeft != nullptr) {
+            queue.push(node->ptrLeft);
         }
-        if (ptrRoot->ptrRight != nullptr) {
-            enQueue(q, ptrRoot->ptrRight->iData);
+        if (node->ptrRight != nullptr) {
+            queue.push(node->ptrRight);
         }
     }
-
-    std::cout << std::endl;
 }
