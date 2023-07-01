@@ -247,9 +247,10 @@ void BinaryTree::buildFromTextFile(const string &filename) {
 }
 
 // Função para construir a árvore a partir de dados digitados pelo usuário.
-void BinaryTree::buildFromUserInput(const int viUserInput[]) {
+void BinaryTree::buildFromUserInput(const int viUserInput[], int iMaxSize) {
     // Itera sobre cada valor fornecido pelo usuário e insere na árvore.
-    for (int i = 0; i < sizeof(viUserInput)/sizeof(viUserInput[0]); i++) {
+    for (int i = 0; i < iMaxSize; i++) {
+        // cout << i << endl;
         insert(viUserInput[i]);
     }
 }

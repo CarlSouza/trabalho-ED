@@ -65,10 +65,8 @@ int main() {
             }
             case 2:
             {
-                int iSize;
-                cout << "Digite o tamanho da árvore: ";
-                cin >> iSize;
-
+                int iSize = 250; // Valor escolhido a conveniência de tamanho limite
+                
                 int viUserInput[iSize];
                 int iValue;
                 int iIndex = 0;
@@ -77,7 +75,7 @@ int main() {
                     viUserInput[iIndex] = iValue;
                     iIndex++;
                 }
-                tree.buildFromUserInput(viUserInput);
+                tree.buildFromUserInput(viUserInput,iIndex);
                 break;
             }
                 break;
