@@ -18,6 +18,10 @@ void insertionSort(struct ListNode** head, bool showSort_)
     // ptrUnordered ira apontar para os nodes que serao realocados dentro da lista ordenada
     struct ListNode* ptrUnordered = nullptr;
 
+    // Visualizar o ordenamento
+    if(showSort_ == true) {
+        print_bars(*head);
+    }
     // Continuar enquanto ainda houver nodes nao verificados na lista
     while(ptrOrdered != nullptr)
     {

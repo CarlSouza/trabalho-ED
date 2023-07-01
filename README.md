@@ -20,7 +20,7 @@
 
 <h3 align = "center">Sobre o código</h3>
 
-<h3>Funcionalidades</h3>
+<h3>Funcionalidades:</h3>
 <p>O programa oferece as seguintes possibilidades de análise de árvores binárias:</p>
 
 <ol>
@@ -47,20 +47,25 @@
 
 <h3>Como usar:</h3>
 
-<p>Faça o download dos arquivos do repositório e utilize um compilador adequado de C++ (há boas opções on-line). Execute o arquivo <i>main.cpp</i>.</p>
+<p></p>
 
-<h2 align = "center"> Como usar : </h2>
 <ol>
-  <li> Para Compilar utlize o comando MakeFile; </li>
-  <li> Para executar o programa utilize o progroma :/edprogram; </li>
-  <li> Ao iniciar uma tela de menu irá aparecer com 13 opções ,sendo a 13° para sair ;</li>
-  <li> As opções de 1 a 2 são para construir uma árvore binária; </li>
-  <li> Os itens 3 e 4 verifica os tamanho ea altura da árvore construída; </li>
-  <li> Os itens 5 ao 7 são operações na árvore realizadas pelo usuário; </li>
-  <li> Os itens  8 e 9 vericam  complute a perfeição da árvores; </li>
-  <li> O item 10 exibe a árvore usando BSF ;</li>
-  <li> O item 11 converte a árvore em listas ordenas , ela abre outro menu com as opções Bubble,Selection,Insert e Shell </li>
-  <li> O item 12 mostra representação gráfica por meio símbolos ASCII </li>
+  <li> Faça o download dos arquivos do repositório e utilize um compilador adequado de C++ (há boas opções on-line); </li>
+  <li> Para compilar, utilize o comando <i>MakeFile</i>;</li>
+  <li>OBS: se for abrir no windows , provavelmente você terá que instalar o Make usando  "sudo apt-get update
+      sudo apt-get install make " </li>
+  <li> Para executar o programa, utilize o código <i>:/edprogram</i>; </li>
+  <li> Ao iniciar, uma tela de menu irá aparecer com 13 opções, sendo a 13ª para sair; </li>
+  <li> As opções 1 e 2 são para construir uma árvore binária; </li>
+  <li> As opções 3 e 4 verifica os tamanho e a altura da árvore construída; </li>
+  <li> As opções 5, 6 e 7 são operações na árvore realizadas pelo usuário; </li>
+  <li> As opções 8 e 9 vericam  complute a perfeição da árvore; </li>
+  <li> A opção 10 exibe a árvore usando BFS; </li>
+  <li> A opção 11 converte a árvore em listas ordenas, ela abre outro menu com as opções Bubble, Selection, Insert e Shell; </li>
+  <li> A opção 12 mostra representação gráfica por meio símbolos ASCII. </li>
+      <ul>
+        <li> Observação: o tamanho das barras verticais da visualização de ordenação corresponde ao número de cada nó. Para que possa usufruir plenamente desta funcionalidade, recomendamos usar números inteiros não negativos,  com um valor absoluto  não muito grande ou listas de tamanho excessivo. </li>
+      </ul>
 </ol>
 
 

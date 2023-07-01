@@ -47,7 +47,8 @@ struct BinaryTree {
     // Funções principais
     void insert(int iData); // Insere um elemento na árvore
     bool remove(int iData); // Remove um elemento da árvore, retorna true se a remoção foi bem-sucedida
-    bool search(int iData); // Procura um elemento na árvore, retorna true se o elemento estiver presente
+    bool search(int iData); // Remove um elemento da árvore, retorna true se a remoção foi bem-sucedida
+    void getAddress(int iData); // Procura um elemento na árvore, retorna true se o elemento estiver presente
 
 
     // Funções para impressão da árvore

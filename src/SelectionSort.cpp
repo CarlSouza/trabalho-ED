@@ -11,6 +11,11 @@ void selectionSort(struct ListNode** head, bool showSort_)
     // Ponteiro para o node interno 
     struct ListNode* ptrInner = nullptr;
 
+    // Visualizar o ordenamento
+    if(showSort_ == true) {
+        print_bars(*head);
+    }
+    
     // Enquanto nao chegarmos ao final da lista externa
     while(ptrOuter != nullptr)
     {

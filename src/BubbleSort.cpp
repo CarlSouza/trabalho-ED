@@ -13,6 +13,10 @@ void bubbleSort(struct ListNode** head, bool showSort_)
     // Booleano para indicar se lista esta desordenada (true por padrao)
     bool bUnordered = true;
 
+    // Visualizar o ordenamento
+    if(showSort_ == true) {
+        print_bars(*head);
+    }
     // Enquanto a lista esta desordenada, ela eh percorrida. 
     // Se a funcao de swap eh acionada pelo menos uma vez, eh pq a lista esta desordenada. O status de desordem eh "verdadeiro".
     // Se a funcao de swap nao eh acionada, eh pq a lista esta ordenada. O status de desordem eh "false" e o loop termina.

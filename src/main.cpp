@@ -108,11 +108,7 @@ int main() {
                 int iDataToSearch;
                 cout << "Digite o valor para buscar na árvore: ";
                 cin >> iDataToSearch;
-                bool bIsFound = tree.search(iDataToSearch);
-                if(bIsFound)
-                    cout << "Elemento encontrado na árvore.";
-                else
-                    cout << "Elemento não encontrado na árvore.";
+                tree.getAddress(iDataToSearch);
                 break;
             }
             case 8:
@@ -144,6 +140,7 @@ int main() {
                 showSort(tree.getRoot());
                 break;
             case 13:
+                cout << "Valeu! :)" << endl;
                 return 0;
             default:
                 cout << "Opção inválida." <<endl;
