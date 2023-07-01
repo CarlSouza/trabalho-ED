@@ -52,9 +52,9 @@
 <ol>
   <li> Faça o download dos arquivos do repositório e utilize um compilador adequado de C++ (há boas opções on-line); </li>
   <li> Para compilar, utilize o comando <i>MakeFile</i>;</li>
-  <li>OBS: se for abrir no windows , provavelmente você terá que instalar o Make usando  "sudo apt-get update
+  <li>OBS: se for abrir no Windows(WSL), provavelmente você terá que instalar o Make usando  "sudo apt-get update
       sudo apt-get install make " </li>
-  <li> Para executar o programa, utilize o código <i>:/edprogram</i>; </li>
+  <li> Para executar o programa, execute o arquivo através de: <i>:/edprogram.o</i>; </li>
   <li> Ao iniciar, uma tela de menu irá aparecer com 13 opções, sendo a 13ª para sair; </li>
   <li> As opções 1 e 2 são para construir uma árvore binária; </li>
   <li> As opções 3 e 4 verifica os tamanho e a altura da árvore construída; </li>
