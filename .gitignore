@@ -3,3 +3,4 @@ edprogram
 .o
 *.o
 make
+main
