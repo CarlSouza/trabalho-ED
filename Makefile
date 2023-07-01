@@ -3,7 +3,7 @@ CC = g++
 # Compiler flags
 CFLAGS = -Wall -Wextra -std=c++17
 # Target executable
-TARGET = edprogram
+TARGET = edprogram.o
 # Directories
 SRCDIR = src
 BUILDDIR = build

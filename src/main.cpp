@@ -52,7 +52,7 @@ int main() {
             continue;
         }
 
-        auto start = std::chrono::high_resolution_clock::now(); //insere a contagem
+        auto aStart = std::chrono::high_resolution_clock::now(); //insere a contagem
 
         switch (iOption) {
             case 1:
@@ -147,9 +147,9 @@ int main() {
                 break;
         }
 
-        auto end = high_resolution_clock::now();
-        auto elapsed = duration_cast<microseconds>(end - start);
-        cout << "O tempo gasto na operação foi: "<< elapsed.count() << " microsegundos"<<endl;
+        auto aEnd = high_resolution_clock::now();
+        auto aElapsed = duration_cast<microseconds>(aEnd - aStart);
+        cout << "O tempo gasto na operação foi: "<< aElapsed.count() << " microsegundos"<<endl;
     }
     return 0;
 }

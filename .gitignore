@@ -1,5 +1,5 @@
 a.out
-edprogram
+edprogram.o
 .o
 *.o
 make

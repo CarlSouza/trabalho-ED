@@ -10,6 +10,11 @@
 using std::cout;
 using std::cin;
 using std::endl;
+using std::numeric_limits;
+using std::streamsize;
+using std::chrono::high_resolution_clock;
+using std::chrono::duration_cast;
+using std::chrono::microseconds;
 
 void printSortOptions() {
     cout << "\n===========================================================================" << endl;
@@ -91,7 +96,6 @@ void treeToList(struct TreeNode* root, struct ListNode** head)
 
 void sort(struct TreeNode* root)
 {
-    printSortOptions();
     // Criamos um head para a lista duplamente encadeada
     struct ListNode* head = nullptr;
 
@@ -102,37 +106,51 @@ void sort(struct TreeNode* root)
     // printList(head);
     // cout << endl;
 
-    int iTypeSort;
-    cin >> iTypeSort;
-    // Escolhe a forma de ordenacao
-    switch(iTypeSort)
-    {
-        case 1:
-            bubbleSort(&head,false);
-            printList(head);
-            sort(root);
-            break;
-        case 2:
-            selectionSort(&head,false);
-            printList(head);
-            sort(root);
-            break;
-        case 3:
-            insertionSort(&head,false);
-            printList(head);
-            sort(root);
-            break;
-        case 4:
-            shellSort(&head,false);
-            printList(head);
-            sort(root);
-            break;
-        case 5:
-            break;
-        default:
-            break;
-    }
+    while (true) {
+        printSortOptions();
+        cout << "Selecione uma opcao digitando um numero de 1 a 13:  ";
+        int iTypeSort;
+        cin >> iTypeSort;
+        if(cin.fail()) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Entrada invalida. Por favor, insira um numero entre 1 e 15!" <<endl;
+            continue;
+        }
+    
 
+        auto start = std::chrono::high_resolution_clock::now(); //insere a contagem
+
+        // Escolhe a forma de ordenacao
+        switch(iTypeSort)
+        {
+            case 1:
+                bubbleSort(&head,false);
+                printList(head);
+                break;
+            case 2:
+                selectionSort(&head,false);
+                printList(head);
+                break;
+            case 3:
+                insertionSort(&head,false);
+                printList(head);
+                break;
+            case 4:
+                shellSort(&head,false);
+                printList(head);
+                break;
+            case 5:
+                return;
+            default:
+                cout << "Opção inválida." <<endl;
+                break;
+        }
+
+        auto end = high_resolution_clock::now();
+        auto elapsed = duration_cast<microseconds>(end - start);
+        cout << "O tempo gasto na operação foi: "<< elapsed.count() << " microsegundos"<<endl;
+    };
     return;
 };
 
