@@ -1,18 +1,11 @@
 #include <iostream>
 #include <chrono> 
 #include <algorithm>
+
 #include "../headers/BinaryTree.hpp"
 #include "../headers/Utils.hpp"
 
-// // linhas a serem ignoradas no commit
-// #include "BinaryTree.cpp"
-// #include "Utils.cpp"
-// #include "BubbleSort.cpp"
-// #include "InsertionSort.cpp"
-// #include "SelectionSort.cpp"
-// #include "ShellSort.cpp"
-// #include "LinkedList.cpp"
-// #include "TreeNode.cpp"
+
 
 using std::cout;
 using std::cin;

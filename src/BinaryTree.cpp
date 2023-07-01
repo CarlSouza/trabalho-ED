@@ -1,7 +1,8 @@
-#include "../headers/BinaryTree.hpp"
 #include <fstream>
 #include <iostream>
 #include <queue>
+
+#include "../headers/BinaryTree.hpp"
 
 using std::string;
 using std::endl;

@@ -6,10 +6,6 @@
 #include "../headers/Utils.hpp"
 #include "../headers/LinkedList.hpp"
 #include "../headers/TreeNode.hpp"
-// #include "../headers/BubbleSort.hpp"
-// #include "../headers/InsertionSort.hpp"
-// #include "../headers/SelectionSort.hpp"
-// #include "../headers/ShellSort.hpp"
 
 using std::cout;
 using std::cin;
