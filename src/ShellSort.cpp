@@ -2,11 +2,12 @@
 #include <bits/stdc++.h>
 
 #include "../headers/LinkedList.hpp"
+#include "../headers/Utils.hpp"
 
 using std::cout;
 using std::endl;
 
-// Funcao para retornar o
+// Funcao para retornar o intervalo
 int nextGap(double gap)
 {
     if (gap < 2)
@@ -29,7 +30,7 @@ int length(struct ListNode* head)
 }
 
 // Funcao de ordenacao em SHELL SORT
-void shellSort(struct ListNode** head)
+void shellSort(struct ListNode** head, bool showSort_)
 {
     // Se a lista esta vazia ou possui apenas um elemento, ela ja esta ordenada
     if ((*head) == nullptr || (*head)->ptrNext == nullptr)
@@ -48,6 +49,10 @@ void shellSort(struct ListNode** head)
         struct ListNode* ptrMiddle = (*head);
         struct ListNode* ptrLead = (*head);
         
+        // Visualizar o ordenamento
+        if(showSort_ == true) {
+            print_bars(*head);
+        }
         // Contadores para colocar ptrLag e ptrLead na posicao correta
         int count = iGap;
         int count2;
@@ -74,6 +79,11 @@ void shellSort(struct ListNode** head)
                 // ptrLag fica "iGap" nodes atras de ptrMiddle
                 ptrLag = ptrMiddle;
                 bool bSwapped = true;
+
+                // Visualizar o ordenamento
+                if(showSort_ == true) {
+                    print_bars(*head);
+                }
                 
                 while(bSwapped)
                 {
@@ -95,6 +105,11 @@ void shellSort(struct ListNode** head)
                         
                         ptrLag = ptrMiddle;
                         ptrMiddle = ptrTemp;
+
+                        // Visualizar o ordenamento
+                        if(showSort_ == true) {
+                            print_bars(*head);
+                        }
                     }
                 }
             }
