@@ -5,8 +5,6 @@
 #include "../headers/BinaryTree.hpp"
 #include "../headers/Utils.hpp"
 
-
-
 using std::cout;
 using std::cin;
 using std::endl;
@@ -59,21 +57,27 @@ int main() {
         switch (iOption) {
             case 1:
             {
-                std::string filename;
+                std::string strFilename;
                 cout << "Digite o nome do arquivo: ";
-                cin >> filename;
-                tree.buildFromTextFile(filename);
+                cin >> strFilename;
+                tree.buildFromTextFile(strFilename);
                 break;
             }
             case 2:
             {
-                std::vector<int> userInput;
-                int value;
+                int iSize;
+                cout << "Digite o tamanho da árvore: ";
+                cin >> iSize;
+
+                int viUserInput[iSize];
+                int iValue;
+                int iIndex = 0;
                 cout << "Digite os valores para construir a árvore (digite -1 para finalizar): ";
-                while (cin >> value && value != -1) {
-                    userInput.push_back(value);
+                while (cin >> iValue && iValue != -1) {
+                    viUserInput[iIndex] = iValue;
+                    iIndex++;
                 }
-                tree.buildFromUserInput(userInput);
+                tree.buildFromUserInput(viUserInput);
                 break;
             }
                 break;
