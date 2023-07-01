@@ -141,6 +141,24 @@ bool BinaryTree::search(int iData) {
     return false;  // Se chegamos ao fim da árvore sem encontrar o valor, retornamos false
 }
 
+void BinaryTree::getAddress(int iData) {
+    TreeNode* current = ptrRoot;  // Começamos na raiz
+
+    while(current != nullptr) {  // Enquanto não chegamos ao fim da árvore
+        if(iData == current->iData) {  // Se o valor do nó atual for o que estamos procurando, retornamos true
+            cout << "Valor encontrado no endereço: " << current << endl;
+            return;
+        } else if(iData < current->iData) {  // Se o valor que estamos procurando for menor que o valor do nó atual, vamos para a esquerda
+            current = current->ptrLeft;
+        } else {  // Se o valor que estamos procurando for maior que o valor do nó atual, vamos para a direita
+            current = current->ptrRight;
+        }
+    }
+
+    cout << "Valor não encontrado.\n" << endl;  // Se chegamos ao fim da árvore sem encontrar o valor, retornamos false
+    return;
+}
+
 // Retorna a altura da árvore
 int BinaryTree::getHeight() {
     return height(ptrRoot);
