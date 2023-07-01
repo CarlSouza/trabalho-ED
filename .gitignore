@@ -1,7 +1,5 @@
 a.out
 edprogram
-/build/*.o
-build/*.o
 .o
 *.o
 make
