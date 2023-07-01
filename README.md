@@ -60,7 +60,7 @@
   <li> Os itens  8 e 9 vericam  complute a perfeição da árvores; </li>
   <li> O item 10 exibe a árvore usando BSF ;</li>
   <li> O item 11 converte a árvore em listas ordenas , ela abre outro menu com as opções Bubble,Selection,Insert e Shell </li>
-  <li> O item 12 mostra representação gráfica por meio simbolos ASCII </li>
+  <li> O item 12 mostra representação gráfica por meio símbolos ASCII </li>
 </ol>
 
 
